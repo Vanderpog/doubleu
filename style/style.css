@@ -244,6 +244,9 @@ hr{
 .b122{
 	padding: 0 20px;
 }
+.shto hr{
+	margin: 6px 0 0 0;
+}
 #b{
 	padding: 20px;
 	width: 100%;
@@ -277,16 +280,17 @@ hr{
 }
 .c{
 	text-align: center;
-	padding: 10px 0 10px 0;
 	background-color: #ff9d45;
 	font-family: Arial;
 	color: white;
-	width: 100%
+	width: 100%;
 }
 .c a{
 	display: block;
 	text-decoration: none;
 	color: white;
+	height: 28px;
+	padding: 12px 0 0 0;
 }
 .nerovno{
 	
@@ -579,6 +583,7 @@ nav img{
 
 }
 .voko a{
+	text-decoration: none;s
 	height: 50px;
 }
 .wwell{
@@ -729,12 +734,33 @@ hr{
 
 
 @media screen and (max-width: 800px) {
+.tretyi{
+	padding: 35px 50px 25px 50px;
+}
+.chetvrtiy{
+	padding: 20px 50px 15px 50px;
+}
+.pytiy{
+	padding: 5px 50px 15px 50px;
+}
+.shheest{
+	padding: 30px 50px 15px 50px;
+}
+.tabrev.{
+	padding: 10px 10px 20px 10px;
+}
+.sedmoy{
+	padding: 25px 50px 15px 50px;
+}
+.sto{
+	padding: 25px 50px 20px 50px;
+}
 .headbody{
 	padding: 0 0 2px  20px;
 }
 .b1{
 	padding: 0;
-	width: 100%;
+	width: 250px;
 }
 nav{
 	position: fixed;
@@ -890,6 +916,7 @@ li a{
 }
 .tabrev{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	padding: 10px 0 20px 0;
 
@@ -920,6 +947,8 @@ li a{
 .reverse{
 	display: flex;
 	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
 
 }
 .tabssoft{
@@ -960,9 +989,7 @@ li a{
 	display: none;
 }
 #try{
-	top: 0px;
-	left: 0px;
-	width: 100%;
+	width: 350px;
 
 }
 #kuku{
@@ -1002,4 +1029,10 @@ li a{
 
 .so{
 	font-size: 17px;
+}
+@media screen and (max-width: 372px) {
+.tabi{
+	max-width: 180px;
+
+}
 }
