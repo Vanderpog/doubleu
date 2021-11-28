@@ -700,7 +700,7 @@ nav img{
 	padding: 0;
 }
 .main{
-	grid-template-columns: 60% 40%
+	grid-template-columns: 60% 40%;
 }
 
 
@@ -799,7 +799,7 @@ nav img{
 	display: block;
 	padding: 10px;
 	position: absolute;
-	right: 0;
+	right: 10px;
 }
 nav li{
 	padding: 10px 0;
@@ -973,7 +973,7 @@ li a{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 60px 50px ;
+	padding: 60px 50px 40px 50px;
 
 }
 
