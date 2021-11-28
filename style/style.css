@@ -96,7 +96,7 @@ nav a {
 	font-size: 30px;
 	color: white;
 	font-weight: 600;
-	margin: 2px 0 0 0;
+	margin: 3px 0 0 0;
 	width: 100%;
 
 }
@@ -1041,14 +1041,14 @@ li a{
 }
 @media screen and (max-width: 372px) {
 .tab1{
-	height: 55px;
-	width: 55px;
+	height: 65px;
+	width: 65px;
 }
 .tab23{
-	height: 55px;
-	width: 55px;
+	height: 65px;
+	width: 65px;
 }
 .tab{
-padding: 8px 0;
+padding: 15px 0;
 }
 }
