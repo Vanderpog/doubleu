@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>pr6_02</title>
+  </head>
+  <script>
+var vA1, vA2, vA3, vA, vA4, vA5, vA6, vA7, vA8, ve=1
+
+function fPro1()
+{
+  vA1 = f1.t_b1.value
+  vA1 = parseInt(vA1);
+}
+function fPro2()
+{
+  vA2 = f1.t_b2.value
+  vA2 = parseFloat(vA2);
+}
+function fPro3()
+{
+  vA3 = f1.t_b3.value
+  vA3 = parseFloat(vA3);
+
+
+for (vA=0; ve<6; ve++)
+ { 
+  alert ("Вычисляем "+ ve+" объем")
+    vA = vA1 * vA2 * vA3
+    switch (vA1) 
+    {
+      case  9: vA4=vA, vA1++; break; 
+      case  10: vA5=vA, vA1++; break; 
+      case  11: vA6=vA, vA1++; break;
+      case  12: vA7=vA, vA1++; break;
+      case  13: vA8=vA, vA1++; break;
+    }
+  t_b5.innerText = vA4
+  t_b6.innerText = vA5
+  t_b7.innerText = vA6
+  t_b8.innerText = vA7
+  t_b9.innerText = vA8
+  }
+}
+    </script>
+  <body>
+    <pre>Вычисление объема параллелепипеда.
+Введите исходные данные:
+Длина (см) -> 9
+Ширина (см) -> 7.5
+Высота (см) -> 5</pre>
+    <form id="f1">
+    <center>
+      <input type="text" name="t_b1" value="Длина">
+    </center>
+    <center>
+      <input type="text" name="t_b2" value="Ширина">
+  	</center>
+    <center>
+      <input type="text" name="t_b3" value="Высота">
+  </center>
+    
+ <br>
+  <center><input type="button" value="Ok" onclick="fPro1(), fPro2(), fPro3()">
+  </center>
+</form>
+    <hr>   
+
+  <center>
+    <b id="t_b4" style="color=blue; font-size=120;">
+      Получили итого :
+    </b>
+  </center>
+
+  <center>
+    <form>
+    <b id="t_b5" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b6" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b7" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b8" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b9" style="color=green; font-size=120;">
+    </b>
+     </form>
+  </center>
+
+</body>
+</html>

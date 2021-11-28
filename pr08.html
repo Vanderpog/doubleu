@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<head>
+<title>PR_07</title>
+</head>
+<script>
+//--------------------------------первого вопроса-------------------------------------------------------------------
+	function fFun1()
+{
+
+var vSpeed1, vTime1, vDistFinish1,
+
+  vSpeed1 = parseFloat (f1.i1.value) // Скорость  в стоячей воде
+  vTime1 = parseFloat (f1.i3.value)	// Время движения лодки по озеру
+
+  vDistFinish1 = vSpeed1 * vTime1
+         vDistFinish1_str = vDistFinish1.toFixed(2);
+         otv1.innerText = vDistFinish1_str
+}
+    function fFun2()
+{
+
+var vSpeed1, vSpeed2, vTime2, vDistFinish2
+
+  vSpeed1 = parseFloat (f1.i1.value) // Скорость  в стоячей воде
+  vSpeed2 = parseFloat (f1.i2.value) // Скорость течения реки
+  vTime2 = parseFloat (f1.i4.value) // Время движения по реке (против течения)
+
+  if (vSpeed2>vSpeed1){
+    otv1_2.innerText = False
+
+}   else{
+         vDistFinish2 = (vSpeed1 - vSpeed2) * vTime2
+         vDistFinish2_str = vDistFinish2.toFixed(2);
+         otv1_2.innerText = vDistFinish2_str}
+}
+
+//-------------------------------второго вопроса----------------------------------------------------------
+
+
+    function fFun3()
+    {
+        var Pi=3.14, R1, R2, vS, vS_str 
+
+  R1 = parseFloat (f2.i1.value) // Внутренний радиус
+  R2 = parseFloat (f2.i2.value) // Внешний радиус
+
+        if (R1>R2){
+    otv2.innerText = False
+
+}   else{
+         vS = Pi *  R2 **2 - Pi* R1 **2
+         vS_str = vS.toFixed(2);
+         otv2.innerText = vS_str}
+    }
+
+//---------------------------------третьего вопроса--------------------------------------------------------------
+
+    function fFun4()
+    {
+        var a, b, c, p,
+
+    a = parseFloat (f3.i1.value) //катет a
+    b = parseFloat (f3.i2.value) //катет b
+
+        c = Math.sqrt (a **2 + b **2) //гипотенуза
+        p = a + b + c
+        p_str = p.toFixed(2);
+        otv3.innerText = p_str
+    }
+     function fFun5()
+    {
+        var a, b, Sp
+
+    a = parseFloat (f3.i1.value) //катет a
+    b = parseFloat (f3.i2.value) //катет b
+
+        Sp = (a * b) / 2
+        Sp_str = Sp.toFixed(2);
+        otv3_1.innerText = Sp_str
+    }
+
+
+</script>
+<body>
+<!-------------------- форма для первого вопроса ---------------->
+<hr>
+<b class=gla01>
+  1. Скорость лодки в стоячей воде V км/ч, скорость течения реки U км/ч (U < V). Время движения лодки по озеру T1 ч, а по реке (против течения) - T2 ч. Определить путь S, пройденный лодкой. <br>
+</b>
+<br>
+<center>
+<form id=f1>
+<table border>
+     <tr><td><b class=t1>Скорость  в стоячей воде : </b></td>
+     <td>
+         <input type="text" name="i1" value="" size=6
+         style="color=#d000d0; background-color=#ffd0dd; font-size=32;">
+     </td></tr> 
+     <tr><td><b class=t1>Скорость течения реки : </b></td><td>
+         <input type="text" name="i2" value="" size=6
+         style="color=#d000d0; background-color=#ffd0dd; font-size=32;">
+     </td></tr> 
+     <tr><td><b class=t1>Время движения лодки по озеру : </b></td><td>
+         <input type="text" name="i3" value="" size=6
+         style="color=#d000d0; background-color=#ffd0dd; font-size=32;">
+     </td></tr> 
+     <tr><td><b class=t1>Время движения по реке (против течения) : </b></td><td>
+         <input type="text" name="i4" value="" size=6
+         style="color=#d000d0; background-color=#ffd0dd; font-size=32;">
+     </td></tr>
+     <tr><td><input type="button" name="b_1" value="РЕШАЕМ" onclick="fFun1()">
+        <b>путь по озеру</b></td>
+    <td><center>
+        <b id="otv1" style="font-size=64;"></b>
+    </center></td></tr>
+     <tr><td><input type="button" name="b_1_2" value="РЕШАЕМ" onclick="fFun2()">
+        <b>путь по реке (против течения)</b></td>
+        <td><center>
+        <b id="otv1_2" style=" font-size=64;"></b>
+    </center></td></tr>  
+</table>
+</form>
+</center>
+<hr>
+
+<!-------------------- форма для второго вопроса ---------------->
+
+<b class=gla01>
+2. Найти площадь кольца, внутренний радиус которого равен R1, а внешний радиус равен R2 (R1 < R2). В качестве значения Pi использовать 3.14. </b>
+<br>
+<br>
+<form id=f2>
+<center>
+<table border>
+<tr>
+    <td><b class=t1>Внутренний радиус R1: </b></td>
+    <td><input type="text" name="i1" value="" size=6
+    style="color=#d000d0; background-color=#ffd0dd; font-size=32;"></td>
+</tr>
+<tr>
+    <td><b class=t1>Внешний радиус R2: </b></td>
+    <td><input type="text" name="i2" value="" size=6
+    style="color=#d000d0; background-color=#ffd0dd; font-size=32;"></td>
+</tr>
+<tr>
+    <td><input type="button" name="b_2" value="РЕШАЕМ" onclick="fFun3()">
+    <b>площадь кольца</b></td>
+    <td><center>
+    <b id="otv2" style="color=yellow; font-size=64;"></b></center></td>
+</tr>
+</table>
+</center>
+</form>
+<hr>
+
+<!-------------------- форма для третьего вопроса ---------------->
+
+<b class=gla01>
+3. Найти периметр и площадь прямоугольного треугольника, если даны длины его катетов a и b. 
+</b>
+<br>
+<form id=f3>
+<center>
+<table border>
+    <tr>
+        <td><b class="t1">Длина катета a</b></td>
+        <td><input type="text" name="i1" value="" size=6
+        style="color=#d000d0; background-color=#ffd0dd; font-size=32;"></td>
+    <tr>
+        <td><b class="t1">Длина катета b</b></td>
+        <td><input type="text" name="i2" value="" size=6
+        style="color=#d000d0; background-color=#ffd0dd; font-size=32;"></td>
+    </tr>
+    <tr>
+        <td><input type="button" name="b_3" value="РЕШАЕМ" onclick="fFun4()">
+        <b>Периметр </b></td>
+        <td><center>
+        <b id="otv3" style="color=yellow; font-size=64;"></b></center></td>
+    </tr>
+    <tr>
+        <td><input type="button" name="b_3_1" value="РЕШАЕМ" onclick="fFun5()">
+        <b>Площадь </b></td>
+        <td><center>
+        <b id="otv3_1" style="color=yellow; font-size=64;"></b></center></td>
+    </tr>
+</table>
+</center>
+</form>
+<hr>
+</body>

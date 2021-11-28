@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>pr6_02</title>
+  </head>
+  <script>
+var vA1, vA2, vA3, vA, vA4, vA5, vA6, vA7, vA8, ve=1
+function fPro1()
+{
+  vA1 = prompt ("Вводите первое число :" , "");
+  vA1 = parseInt(vA1)
+  t_b1a.innerText = vA1
+}
+function fPro2()
+{
+  t_b2a.innerText = ""
+  vA2 = parseFloat (prompt ("Вводите второе число :", "") );
+  t_b2a.innerText = vA2
+}
+  function fPro3()
+{
+  t_b3a.innerText = ""
+  vA3 = parseFloat (prompt ("Вводите третье число :", "") );
+  t_b3a.innerText = vA3
+for (vA=0; ve<6; ve++)
+ { 
+  alert ("Вычисляем "+ ve+" объем")
+    vA = vA1 * vA2 * vA3
+    switch (vA1) 
+    {
+      case  9: vA4=vA, vA1++; break; 
+      case  10: vA5=vA, vA1++; break; 
+      case  11: vA6=vA, vA1++; break;
+      case  12: vA7=vA, vA1++; break;
+      case  13: vA8=vA, vA1++; break;
+    }
+  t_b5.innerText = vA4
+  t_b6.innerText = vA5
+  t_b7.innerText = vA6
+  t_b8.innerText = vA7
+  t_b9.innerText = vA8
+  }
+}
+    </script>
+  <body>
+    <pre>Вычисление объема параллелепипеда.
+Введите исходные данные:
+Длина (см) -> 9
+Ширина (см) -> 7.5
+Высота (см) -> 5</pre>
+    <center>
+      <b id="t_b1" style="color=white; font-size=80;" onclick="fPro1()">
+      		Длина (см) ->
+      </b>
+     <b id="t_b1a" style="color=white; font-size=80;">
+      </b>
+     </center>
+
+    <center>
+    	<b id="t_b2" style="color=white; font-size=80;" onclick="fPro2()">
+      		Ширина (см) ->
+    	</b>
+        <b id="t_b2a" style="color=white; font-size=80;">
+    </b>
+  	</center>
+
+    <center>
+    	<b id="t_b3" style="color=white; font-size=80;" onclick="fPro3()">
+			Высота (см) ->
+    	</b>
+    <b id="t_b3a" style="color=white; font-size=80;">
+    </b>
+  </center>
+
+  <hr>
+
+  <center>
+    <b id="t_b4" style="color=blue; font-size=120;">
+      Получили итого :
+    </b>
+  </center>
+  <center>
+    <b id="t_b5" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b6" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b7" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b8" style="color=green; font-size=120;">
+    </b>
+    <b id="t_b9" style="color=green; font-size=120;">
+    </b>
+  </center>
+
+</body>
+</html>

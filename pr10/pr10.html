@@ -1,0 +1,343 @@
+<html>
+<head><title>PR10</title></head>
+<style>
+.cto {
+	position=absolute;
+	top=110; left=360; 
+	width=46; 
+	height=20;
+	background-color=#00ff00;
+}
+.cfrom {
+	position=absolute; 
+	top=110; 
+	left=460; 
+	width=46; 
+	height=20;
+	background-color=#ff0000; 
+}
+.cnext {
+	position=absolute; 
+	top=130;
+	left=24; 
+	width=46; 
+	height=20;
+	background-color=#ffff00;
+}
+.cstart {
+	position=absolute; 
+	top=030; 
+	left=24; 
+	width=46; 
+	height=20; 
+	background-color=#ffff00;
+}
+.ccreqN {
+	position=absolute; 
+	top=160; 
+	left=010;
+}
+.ccreq01 {
+	position=absolute; 
+	top=160; 
+	left=390;
+}
+.ccreq02 {
+	position=absolute; 
+	top=190; 
+	left=390;
+}
+.ccreq03 {
+	position=absolute; 
+	top=222; 
+	left=390;
+}
+.ccreq04 {
+	position=absolute; 
+	top=256; 
+	left=390;
+}
+.ccreq05 {
+	position=absolute; 
+	top=286; 
+	left=390;
+}
+.ccreq06 {
+	position=absolute; 
+	top=318; 
+	left=390;
+}
+.ccreq07 {
+	position=absolute; 
+	top=351; 
+	left=390;
+}
+.ccreq08 {
+	position=absolute; 
+	top=382; 
+	left=390;
+}
+.ccreq09 {
+	position=absolute; 
+	top=415; 
+	left=390;
+}
+.ccreq10 {
+	position=absolute; 
+	top=448; 
+	left=390;
+}
+.ccreq11 {
+	position=absolute; 
+	top=482; 
+	left=390;
+}
+.ccreq12 {
+	position=absolute; 
+	top=513; 
+	left=390;
+}
+html{
+  max-width: 1280px;
+  margin: 0 auto; 
+}
+body{
+  padding: 50px 100px;
+  font-family: Arial;
+
+}
+body a{
+  text-decoration: none;
+  color: black;
+}
+.main{
+  max-width: 1280px;
+  border-radius: 5px;
+  border: 5px solid #b0b0b0;
+  padding: 0 25px;
+}
+input{
+  font-size: 20px;
+  padding: 9px 20px;
+  width: 100%;
+  margin: 0 10px 5px 10px;
+  text-align: center;
+}
+.inputi{
+  
+  margin: 0 5px 0 0;
+}
+.flexi{
+  padding: 0 60px;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flexi input{
+  border-radius: 5px;
+  border: 2px solid #b0b0b0;
+  margin: 0 10px 5px 0
+}
+.flexi img{
+  border-radius: 5px;
+  border: 2px solid #b0b0b0;
+}
+.mishi{
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+  margin: 20px 0;
+}
+.mishi img{
+  margin: 0 10px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #b0b0b0;
+}
+.photo{
+  width: 500px;
+}
+.footer h4{
+  margin: 0;
+  font-size: 17px;
+}
+.footer {
+  margin: 15px 0 0 0;
+  font-size: 12px;
+}
+@media screen and (max-width: 1180px) {
+.mishi{
+  max-width: 450px;
+}
+}
+@media screen and (max-width: 790px) {
+body{
+  padding: 10px 10px;
+}
+}
+
+@media screen and (max-width: 560px) {
+.flexi input{
+  margin: 0 10px 5px 0;
+  width: 100%;
+}
+.inputi {
+  width: 204px;
+  margin: 0 0 5px 0 ;
+}
+.flexi {
+  padding: 0;
+  max-width: 204px;
+}
+
+}
+@media screen and (max-width: 320px) {
+  .mishi img{
+    margin: 0 0 10px 0;
+}
+}
+</style>
+<script>
+
+var vREQ = new Array (12)       // модель очереди на обработку
+				// (внутренний массив переменных)	
+var vPR1, vPR2, vPR3, vPR4	// проценты по типам (вероятности)
+var vRand			// для получения случайных чисел
+var vNext			// для моделирования очередного "клиента"
+var vvI				// рабочая переменная
+
+function fStart()
+{
+// "чистим очередь" - сбрасываем значения переменных внутреннего массива в 0
+  for (vvI = 0; vvI <= 12; vvI++) { vREQ[vvI] = 0; };
+// "чистим очередной эапрос"
+   vNext = 0
+// устанавливаем вероятности запросов разных типов
+ vPR1=0.6;  vPR2 = 0.2;  vPR3=0.1;  vPR4=0.1;
+// визуализация модели
+   fVisual()
+}
+
+
+function fNext()
+{
+ // fSeeImages();
+
+   vRand = Math.random()
+       if (vRand < vPR1) vNext = 1
+       if (vRand >= vPR1 && vRand < vPR1+vPR2) vNext = 2
+       if (vRand >= vPR1+vPR2 && vRand < vPR1+vPR2+vPR3) vNext = 3
+       if (vRand >= vPR1+vPR2+vPR3) vNext = 4
+       fVisual();
+}
+
+
+function fTo()
+{
+   for (vvI = 0; vvI < 12; vvI++)
+   { if (vREQ[vvI] == 0)
+     { if (vNext==1) vREQ[vvI] = 1
+       if (vNext==2) vREQ[vvI] = 2
+       if (vNext==3) vREQ[vvI] = 3
+       if (vNext==4) vREQ[vvI] = 4
+       break;
+     }
+
+   }
+    if (vvI == 8) alert ("Стак полон")
+    vNext = 0
+    fVisual();
+}
+
+
+function fFrom()
+{
+   for (vvI = 0; vvI < 11; vvI++)
+   { vREQ[vvI] = vREQ[vvI+1]
+   }
+        vREQ[11] = 0;
+	fVisual();
+}
+
+
+
+function fVisual()
+{
+   if (vNext == 0) document.images[0].src = "222.jpg"
+   if (vNext == 1) document.images[0].src = "21.gif"
+   if (vNext == 2) document.images[0].src = "22.gif"
+   if (vNext == 3) document.images[0].src = "1.gif"
+   if (vNext == 4) document.images[0].src = "2.gif"
+
+
+  for (vvI = 0; vvI < 12; vvI++)
+  { 
+//alert (vvI + "__" + vREQ[vvI] + "__" + document.images[vvI].name)
+    document.images[vvI+1].src = ""
+    if (vREQ[vvI] == 0) document.images[vvI+1].src="222.jpg";
+    if (vREQ[vvI] == 1) document.images[vvI+1].src="21.gif";
+    if (vREQ[vvI] == 2) document.images[vvI+1].src="22.gif";
+    if (vREQ[vvI] == 3) document.images[vvI+1].src="1.gif";
+    if (vREQ[vvI] == 4) document.images[vvI+1].src="2.gif";
+  }
+}
+
+
+function fSeeImages()
+{
+ for (vvI = 0; vvI < 10; vvI++)
+alert (document.images[vvI].name) 
+}
+
+
+</script>
+<body onload="fStart()">
+<center>
+<div class="main">
+<div class="start">
+<p><h1>10_02</h1><i>Кошки рыжие (Q1=0.6) и черные (Q2=0.2), мышки серые (Q3=0.1) и белые (Q4=0.1).</i></p>
+</div>
+<!---------- кнопки управления -------------->
+<div class="flexi">
+<div class="inputi">
+<input type=button class=cto name="cTo" value="TO" onclick="fTo()">
+<br>
+<input type=button class=cfrom  name="cFrom" value="FROM"  onclick="fFrom()">
+<br>
+<input type=button class=cnext  name="cNext" value="NEXT" onclick="fNext()">
+<br>
+<input type=button class=cstart name="cStart" value="START" onclick="fStart()">
+</div>
+<img name="creqN" class=ccreqN src="222.jpg" width="200px" height="191">
+</div>
+
+<!--------- очередной "запрос" ----------->
+
+
+
+<!--------- очередь на мнемосхеме ----------->
+<h3>Очередь :</h3>
+<div class="mishi">
+
+<img name="creq01" class=ccreq01 src="222.jpg" width="200px" height="196">
+<img name="creq02" class=ccreq02 src="222.jpg" width="200px" height="196">
+
+
+<img name="creq03" class=ccreq03 src="222.jpg" width="200px" height="196">
+<img name="creq04" class=ccreq04 src="222.jpg" width="200px" height="196">
+
+
+<img name="creq05" class=ccreq05 src="222.jpg" width="200px" height="196">
+<img name="creq06" class=ccreq06 src="222.jpg" width="200px" height="196">
+
+<img name="creq07" class=ccreq07 src="222.jpg" width="200px" height="196">
+<img name="creq08" class=ccreq08 src="222.jpg" width="200px" height="196">
+
+</div>
+</div>
+<div class="footer">
+  <p><a href=""><h4>Багров Егор</h4></a>2021</p>
+</div>
+</center>
+</body></html>
