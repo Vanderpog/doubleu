@@ -223,6 +223,13 @@ hr{
 	justify-content: center;
 	background-color: white;
 }
+.try{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
 .try1{
 	display: grid;
 	grid-template-columns: 50% 50%
@@ -988,9 +995,11 @@ li a{
 #ax .down{
 	display: none;
 }
-#try{
+.try{
 	width: 350px;
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 #kuku{
 	max-width: 100%;
@@ -1031,8 +1040,15 @@ li a{
 	font-size: 17px;
 }
 @media screen and (max-width: 372px) {
-.tabi{
-	max-width: 180px;
-
+.tab1{
+	height: 55px;
+	width: 55px;
+}
+.tab23{
+	height: 55px;
+	width: 55px;
+}
+.tab{
+padding: 8px 0;
 }
 }
