@@ -95,7 +95,7 @@ body a{
 .main{
   max-width: 1280px;
   border-radius: 20px;
-  border: 1px solid white;
+  border: 2px solid rgba(0, 0, 0, 0.30);
   padding: 0 25px 20px 25px;
 
 }
@@ -137,6 +137,7 @@ input{
   background-color: #343434;
   transition: all 0.2s ease 0s;
   color: #f0f0f0;
+  border: 2px solid #b0b0b0;
 }
 .flexi input:active{
   background-color: #ff9d45;
@@ -160,7 +161,6 @@ input{
 
   max-width: 900px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;  
   margin: 20px 0 10px 0;
 }
@@ -171,35 +171,6 @@ input{
 .photo{
   width: 500px;
 }
-.footerssilka{
-  border-radius: 5px;
-  border: 2px solid rgba(0, 0, 0, 0);
-  padding: 0;
-}
-.footerssilka:hover{
-  transition: all 0.3s ease 0s;
-  background-color: #343434;
-  color: #f0f0f0;
-  box-shadow: -1px -1px 26px 0px rgba(0, 0, 0, 0.15);
-  border: 2px solid #b0b0b0;
-}
-.footerssilka:active{
-  background-color: #ff9d45;
-  transition: all 0.05s ease 0s;
-  color: #343434;
-  border: 2px solid black;
-}
-.footerssilka p{
-  width: 100%;
-}
-.footer h4{
-  margin: 0;
-  font-size: 17px;
-}
-.footer {
-  margin: 5px 0;
-  font-size: 12px;
-}
 .main1 {
   background-color: #e6e6e6;
   border-radius: 10px;
@@ -207,6 +178,68 @@ input{
   box-shadow: -1px -1px 26px 0px #f0f0f0;
   margin: 0 10px 10px 10px;
 }
+.footer{
+  padding: 10px 0 0 0;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.footer span{
+  font-size: 10px;
+}
+.bbshka{
+  display: flex;
+  justify-content: space-around;
+}
+.bbshka button{
+  width: 100%;
+  outline: none;
+  margin: 0 20px 5px 20px;
+  padding: 0;
+  box-shadow: -1px -1px 26px 0px rgba(0, 0, 0, 0.15); 
+  border-radius: 5px;
+  border: 2px solid #b0b0b0;
+  background-color: #e6e6e6;
+}
+
+.krizhov{
+  background-image: url(stepan.png);
+  opacity: 1;
+}
+.bbshka div{
+  background-color: #e6e6e6;
+  opacity: 0.8;
+  padding: 8px 8px;
+  margin: 0;
+}
+.bbshka div:hover{
+  background-color: #343434;
+  opacity: 0.8;
+  padding: 8px 8px;
+  margin: 0;
+}
+.bagor{
+  background-image: url(bagor.png);
+  opacity: 1;
+}
+
+
+.bbshka button:hover{
+  background-color: #343434;
+  transition: all 0.2s;
+  color: white;
+}
+.bbshka button:active{
+  background-color: #ff9d45;
+  transition: all 0.05s ease 0s;
+  color: #343434;
+  border: 2px solid black;
+}
+.bbshka h4{
+  margin: 0;
+}
+
+}
+
 @media screen and (max-width: 1180px) {
 .mishi{
   max-width: 450px;
@@ -216,11 +249,7 @@ input{
 body{
   padding: 10px 10px;
 }
-.footerssilka{
-  background-color: #343434;
-  margin: 0 10px;
-  color: white;
-}
+
 .flexi input:hover{
   transition: all 0.2s ease 0s;
   color: black;
@@ -235,9 +264,9 @@ body{
 }
 .main:hover{
   box-shadow: -1px -1px 26px 0px rgba(0, 0, 0, 0);
-  transition: all 0.3s ease 0s;
-  
+  transition: all 0.3s ease 0s; 
 }
+
 }
 
 @media screen and (max-width: 560px) {
@@ -269,6 +298,17 @@ body{
 .start h1{
   margin-top: 10px;
   margin-bottom: 15px;
+}
+.main{
+  border: none;
+}
+.bbshka{
+  padding: 0 10px;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 }
