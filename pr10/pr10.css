@@ -114,24 +114,32 @@ input{
 
 }
 .inputi{
-  
   margin: 0 0 0 40px;
-  
 }
+
 .flexi{
   
-  padding: 0 30px 30px 30px;
-  margin: 10px 0;
+  padding: 0 30px 10px 30px;
+  margin: 10px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.log{
+  padding: 3px 0 0 5px;
+  font-size: 11px;
+  text-align: left;
+}
+.cto{
+  background-color: #ff9d45;
+  opacity: 0.5;
 }
 .flexi input{
   box-shadow: -1px -1px 26px 0px rgba(0, 0, 0, 0.15); 
   border-radius: 5px;
   border: 2px solid #b0b0b0;
   margin: 0 10px 5px 0;
-  background-color: #e6e6e6;
+
 }
 .flexi input:hover{
   background-color: #343434;
@@ -158,30 +166,51 @@ input{
   box-shadow: -1px -1px 26px 0px rgba(0, 0, 0, 0.3);
 }
 .mishi{
-
+  border: 2px solid #b0b0b0;
+  border-radius: 10px;
   max-width: 900px;
   display: flex;
   flex-wrap: wrap;  
-  margin: 20px 0 10px 0;
+  margin: 10px 0;
+  overflow: hidden;
 }
+.mishi:hover{
+  box-shadow: -1px -1px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+}
+
 .mishi img{
-  margin: 0 10px 10px 10px;
+  margin: 10px;
   border: 0;
 }
 .photo{
   width: 500px;
 }
 .main1 {
+  max-width: 910px;
   background-color: #e6e6e6;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 10px 20px;
   box-shadow: -1px -1px 26px 0px #f0f0f0;
   margin: 0 10px 10px 10px;
+}
+.mishi p {
+  font-size: 11px;
+  background-color: white;
+  text-align: left;
+  padding: 3px 20px;
+  width: 100%;
+  margin: 0;
 }
 .footer{
   padding: 10px 0 0 0;
   margin: 10px 0;
   border-radius: 5px;
+}
+
+.cto.stop1{
+  background-color: #e6e6e6;
+  opacity: 1;
 }
 .footer span{
   font-size: 10px;
@@ -276,7 +305,7 @@ body{
 }
 .inputi {
   width: 204px;
-  margin: 30px 0 5px 0 ;
+  margin: 5px 0;
 }
 .flexi {
   padding: 0 0 0 30px 0;
