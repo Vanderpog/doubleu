@@ -1,8 +1,8 @@
 	$(document).ready(function() {
 		$('.menu').click(function(event){
-			$('.nav').toggleClass('active1')
+			$('.nav,.hdr').toggleClass('active1')
 	});
 		$('main, .ftr').click(function(event){
-			$('.nav').removeClass('active1')
+			$('.nav,.hdr').removeClass('active1')
 	});
 	});

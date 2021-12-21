@@ -112,6 +112,7 @@ main{
 	height: 40px;
 	justify-content: center;
 	opacity: 0.7;
+
 }
 .nav a{
 	text-decoration: none;
@@ -156,6 +157,17 @@ main{
 	margin: 0 40px 0 0;
 	height: 100%;
 }
+.soder12{
+	display: none;
+	transition: all 0.13s ;
+	opacity: 1;
+	padding: 12px 0 20px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 20px;
+	min-width: 200px;
+	margin: 0 40px 0 0;
+	height: 100%;
+}
 .soder1:hover{
 	background-color: rgba(255,255,255,0.9);
 	transition: all 0.13s ;
@@ -171,9 +183,20 @@ main{
 .soder1 a{
 	color: black;
 	padding: 3px 0
+	width: 100px;
 }
 .soder1 li{
 	padding: 5px 0;
+	overflow: hidden;
+}
+.soder12 a{
+	color: black;
+	padding: 3px 0
+	width: 100px;
+}
+.soder12 li{
+	padding: 5px 0;
+	overflow: hidden;
 }
 .main_block1{
 	padding: 12% 50px 100px ;
@@ -247,11 +270,7 @@ main{
 .istor{
 	padding: 50px 0 0;
 }
-.soderzh1{
-	display: flex;
-	text-indent: 20px;
-	padding: 5px 0 0 0;
-}
+
 .his{
 	width: 50%;
 	margin: 10px -2px;
@@ -355,6 +374,9 @@ main{
 }
 .nav_bat{
 	color: #1d1d1d;
+	max-width: 150px;
+	justify-content: flex-start;
+	overflow: hidden;
 }
 .palka{
 	border-right: 0;
@@ -368,33 +390,57 @@ main{
 .nav.active1{
 	right: -9px;
 	transition: all 0.3s;
+	height: 550px;
+}
+.hdr.active1{
+	position: relative;
 }
 .main_block1{
 	padding: 85px 20px 100px;
 	flex-direction: column;
 }
 .main_block1_text2{
-	display: none;
+	font-size: 16px;
+	border: 0;	
+	padding: 20px;
 }
 .main_block1_text1{
-
+	font-size: 18px;
+	border: 1 solid black;
+	padding: 20px;
+}
+.textvntr{
+	border: 0;
+	padding: 0;
 }
 .soder1{
-	order: 2;
-	margin: 30px 0 0 0;
-	display: flex;
-	justify-content: flex-end;
-	min-width: 0;
-	flex-direction: column;
+	display: none;
+}
+.soder12{
+	position: relative;
+	left: 20px;
+	display: block;
+	opacity: 0.5;
+}
+.soder12 a{
+	justify-content: flex-start;
+	height: 100%;
+	width: 150px;
+	overflow: hidden;
+}
+.main_block2_sslky {
+	margin: 10px;
+	width: 180px;
+}
+.soder12 li{
+	overflow: hidden;
 }
 .main_block1_text div{
-	font-size: 18px;
-	border: 0;
 	background-color: rgba(255,255,255,0);
 }
 .main_block1_text{
 	background-color: rgba(255,255,255,0.9);
-	padding: 20px;
+	padding: 0;
 	order: 1;
 }
 .none{
@@ -422,4 +468,9 @@ main{
 	padding: 10px 20px 5px 20px;
 }
 
+}
+@media screen and (max-width: 274px) {
+.main_block1_text2{
+	display: none;
+}
 }
