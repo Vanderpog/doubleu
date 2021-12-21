@@ -224,6 +224,14 @@ main{
 	flex-direction: column;
 
 }
+.soderzh1 img{
+	height: 250px;
+
+}
+.soderzh1{
+	max-width: 700px;
+	margin: 0 auto;
+}
 .textvntr{
 	border: 1px solid black;
 	border-radius: 10px;
@@ -274,7 +282,7 @@ main{
 .his{
 	width: 50%;
 	margin: 10px -2px;
-	padding: 
+	height: 100%;
 }
 .ftr{
 	max-width: 1180px;
@@ -460,6 +468,10 @@ main{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+.soderzh1 img{
+	height: 100%;
+
 }
 .his{
 	width: 100%;
